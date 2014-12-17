@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.1'
+
+    defaultConfig {
+        applicationId "eu.fistar.sdcs.pa.da.bthdp"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 3
+        versionName "3.3.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // This entry is added in order to use the native libs of Antidote
+    sourceSets.main {
+        jniLibs.srcDir '/src/main/jniLibs'
+    }
+}
+
+// This entry is added in order to use the AAR library
+repositories {
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // This is the entry that adds the dependency from the AAR library
+    compile 'eu.fistar.sdcs.pa.common:protocol-adapter-lib:3.3.2@aar'
+    compile 'com.android.support:support-v4:21.0.+'
+}

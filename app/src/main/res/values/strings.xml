@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HDP Device Adapter</string>
+    <string name="title_activity_config">HDP Device Adapter</string>
+    <string name="welcome_message">HDP Device Adapter correctly activated! You need to do this only once. From now on you can just start the Protocol Adapter.</string>
+
+</resources>
