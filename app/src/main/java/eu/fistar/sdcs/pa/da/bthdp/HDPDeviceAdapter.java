@@ -119,11 +119,6 @@ public class HDPDeviceAdapter extends Service implements HealthAgentAPI {
             return DiscoveryResponder.CAPABILITIES;
         }
 
-        @Override
-        public String getDAConfigActivityName() throws RemoteException {
-            throw new UnsupportedOperationException(METHOD_NOT_SUPPORTED);
-        }
-
         /**
          * Start the Device Adapter operations.
          */
@@ -371,7 +366,7 @@ public class HDPDeviceAdapter extends Service implements HealthAgentAPI {
         Log.v(PAAndroidConstants.DA_LOGTAG, hdpDev.toString());
         try {
             // It's required to create a new object of type DeviceDescription for AIDL to work correctly
-            paApi.registerDevice(new DeviceDescription(hdpDev));
+            paApi.registerDevice(new DeviceDescription(hdpDev), DiscoveryResponder.CapabilitiesConstants.DA_ID);
         } catch (RemoteException e) {
             Log.d(PAAndroidConstants.DA_LOGTAG, "Remote Exception!");
         }

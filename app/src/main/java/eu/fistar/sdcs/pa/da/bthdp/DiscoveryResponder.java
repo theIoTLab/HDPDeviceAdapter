@@ -41,7 +41,8 @@ public class DiscoveryResponder extends BroadcastReceiver {
     public final static Capabilities CAPABILITIES = new Capabilities(
             CapabilitiesConstants.CAP_BLACKLIST_SUPPORT,
             CapabilitiesConstants.CAP_WHITELIST_SUPPORT,
-            CapabilitiesConstants.CAP_GUICONFIGURATION_SUPPORT,
+            CapabilitiesConstants.CAP_GUICONFIGURATION_ACTIVITY,
+            CapabilitiesConstants.CAP_GUICONFIGURATION_ACTIVITY_PACKAGE,
             CapabilitiesConstants.CAP_DEV_CONF_TYPE,
             CapabilitiesConstants.CAP_COMMANDS_SUPPORT,
             CapabilitiesConstants.CAP_DETECT_DEV_SUPPORT,
@@ -86,7 +87,8 @@ public class DiscoveryResponder extends BroadcastReceiver {
         // Capabilities constants, specific for each DA
         public static final boolean CAP_BLACKLIST_SUPPORT = false;
         public static final boolean CAP_WHITELIST_SUPPORT = false;
-        public static final boolean CAP_GUICONFIGURATION_SUPPORT = false;
+        public static final String CAP_GUICONFIGURATION_ACTIVITY = "";
+        public static final String CAP_GUICONFIGURATION_ACTIVITY_PACKAGE = "";
         public static final int CAP_DEV_CONF_TYPE = Capabilities.CONFIG_NOT_SUPPORTED;
         public static final boolean CAP_COMMANDS_SUPPORT = false;
         public static final boolean CAP_DETECT_DEV_SUPPORT = false;
