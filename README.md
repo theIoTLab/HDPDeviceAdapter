@@ -1,7 +1,7 @@
 #HDP Bluetooth Device Adapter
 
 FI-STAR Phase: Beta  
-Document version: 1.0 (draft)
+Document version: 1.0 (draft)  
 Date: 05/03/2015
 
 ##What is the HDP Bluetooth Device Adapter
