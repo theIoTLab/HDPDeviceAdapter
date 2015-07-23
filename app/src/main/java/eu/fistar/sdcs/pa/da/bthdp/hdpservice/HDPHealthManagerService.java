@@ -205,7 +205,7 @@ public class HDPHealthManagerService extends Service implements HealthServiceAPI
                     Log.w(TAG, "HDP data");
                     Object[] pair = (Object[]) msg.obj;
                     context = get_context((BluetoothDevice) pair[0]);
-                    if (context > 0) {
+                    if (context > 0 && antidote != null) {
                         antidote.data_received(context, (byte[]) pair[1]);
                     }
                     break;
@@ -214,7 +214,7 @@ public class HDPHealthManagerService extends Service implements HealthServiceAPI
                     Log.w(TAG, "HDP closed channel");
                     mDevice = (BluetoothDevice) msg.obj;
                     context = get_context(mDevice);
-                    if (context > 0) {
+                    if (context > 0 && antidote != null) {
                         antidote.channel_disconnected(context);
                         sendDisconnected(context);
                     }
@@ -224,7 +224,7 @@ public class HDPHealthManagerService extends Service implements HealthServiceAPI
                     Log.w(TAG, "HDP create channel complete");
                     mDevice = (BluetoothDevice) msg.obj;
                     context = get_context(mDevice);
-                    if (context > 0) {
+                    if (context > 0 && antidote != null) {
                         antidote.channel_connected(context);
                         sendConnected(context, mDevice);
                     }
@@ -234,7 +234,7 @@ public class HDPHealthManagerService extends Service implements HealthServiceAPI
                     Log.w(TAG, "HDP destroy channel complete");
                     mDevice = (BluetoothDevice) msg.obj;
                     context = get_context(mDevice);
-                    if (context > 0) {
+                    if (context > 0 && antidote != null) {
                         antidote.channel_disconnected(context);
                         sendDisconnected(context);
                     }

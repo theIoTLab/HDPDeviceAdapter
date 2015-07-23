@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion '21.1.1'
+    buildToolsVersion '21.1.2'
 
     defaultConfig {
         applicationId "eu.fistar.sdcs.pa.da.bthdp"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 5
-        versionName "3.4.1"
+        versionCode 6
+        versionName "3.4.2"
     }
     buildTypes {
         release {

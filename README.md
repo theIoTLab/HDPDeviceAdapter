@@ -1,7 +1,7 @@
 #HDP Bluetooth Device Adapter
 
 FI-STAR Phase: Beta  
-Document version: 1.0 (draft)  
+Document version: 1.0 (draft)
 Date: 05/03/2015
 
 ##What is the HDP Bluetooth Device Adapter
@@ -48,4 +48,3 @@ As the licence reads, this is free software released by Consorzio Roma Ricerche.
 
 ## Acknowledgement
 This work was carried out with the support of the FI-STAR project (“Future Internet Social and Technological Alignment Research”), an integrated project funded by the European Commission through the 7th ICT - Framework Programme (318389).
-The HDP Device Adapter makes use for Bluettoth HDP management of Signove's [Antidote libraries](http://oss.signove.com/index.php/Antidote:_IEEE_11073-20601_stack) which are available under L-GPL licence as well. 
